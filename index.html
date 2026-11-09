@@ -1,13 +1,591 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#111217"><meta name="description" content="Nataliia Evseeva — engineering portfolio: battery monitoring, mechanical design, validation and technical program coordination."><title>Nataliia Evseeva | Engineering Portfolio</title>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#111217">
+<meta name="description" content="Nataliia Evseeva — Engineering Portfolio">
+<title>Nataliia Evseeva | Engineering Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap');
-:root{--bg:#101116;--panel:#1a1b22;--panel2:#22232c;--line:#34323a;--text:#f5f0ec;--muted:#a9a5ac;--wine:#a34765;--light:#e9b0c1;--paper:#f2ece8}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:'DM Sans',Arial,sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--light);outline-offset:4px}.wrap{max-width:1220px;margin:auto;padding:0 38px}.mono,.eyebrow{font:500 11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.15em;text-transform:uppercase}.eyebrow{color:var(--light)}header{position:sticky;top:0;z-index:20;background:#101116e9;backdrop-filter:blur(16px);border-bottom:1px solid #ffffff13}nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font:600 25px 'Playfair Display',Georgia,serif}.brand b{color:var(--light)}.navlinks{display:flex;gap:28px;font-size:13px;color:#d0cbd0}.navlinks a:hover,.link:hover{color:var(--light)}.navcta{padding:10px 16px;border:1px solid #8c5368;color:var(--light);font-size:12px}.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:55px;align-items:center;padding-top:92px;padding-bottom:92px}.hero h1{font:500 clamp(51px,6.1vw,90px)/1.05 'Playfair Display',Georgia,serif;letter-spacing:-.045em;margin:20px 0 25px}.hero h1 em{font-style:normal;color:var(--light)}.lede{max-width:630px;color:#bfb9c1;font-size:17px}.hero-buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;border:1px solid #8c5368;color:#f7e9ed;font-size:13px;gap:14px;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px)}.btn.primary{background:var(--wine);border-color:var(--wine);color:white}.portrait{position:relative;max-width:380px;justify-self:end;width:100%}.portrait:before{content:'';position:absolute;inset:24px -16px -16px 24px;border:1px solid #8c5368}.portrait.jpg{position:relative;display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 22%;filter:saturate(.8)}.portrait-note{position:absolute;bottom:-18px;left:-20px;background:var(--panel);border:1px solid var(--line);padding:12px 18px;color:#e6dce0;font-size:12px}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 0}.metric strong{display:block;font-size:18px;font-weight:600}.metric span{font:11px 'IBM Plex Mono',monospace;color:var(--muted)}section{padding:100px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:36px;margin-bottom:42px}.section-head p{max-width:400px;color:var(--muted);font-size:14px;margin:0}h2{font:500 clamp(37px,4.4vw,58px)/1.1 'Playfair Display',Georgia,serif;letter-spacing:-.03em;margin:10px 0 0}h3{font-size:20px;line-height:1.3;margin:0 0 12px}.project-feature{background:var(--panel);border:1px solid var(--line);padding:26px;display:grid;grid-template-columns:1.25fr .75fr;gap:36px}.schematic{background:#111319;border:1px solid #42404b;padding:16px;position:relative}.schematic svg{width:100%;height:auto;display:block}.schematic .schematic-caption{display:flex;justify-content:space-between;gap:12px;color:#aaa4b0;font:10px 'IBM Plex Mono',monospace;margin-top:9px}.schematic svg .wire{stroke:#a65c76;stroke-width:2.2;fill:none;stroke-dasharray:6 6;animation:dash 16s linear infinite}.schematic svg .node{fill:#24232e;stroke:#8f6174;stroke-width:1.4}.schematic svg .node.active{stroke:#f2b7cb;filter:drop-shadow(0 0 5px #b85b8055)}.schematic svg text{font:12px 'IBM Plex Mono',monospace;fill:#e9dce3}.schematic svg .sub{font-size:9px;fill:#b9acb7}.schematic svg .tiny{font-size:8px;fill:#e9bac8}.schematic svg .wiretext{font-size:9px;fill:#cf8ba3}@keyframes dash{to{stroke-dashoffset:-180}}.readout{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:14px}.readout div{padding:10px;background:#20212b;border:1px solid #373441}.readout span{display:block;font:9px 'IBM Plex Mono',monospace;color:#bcb1bd}.readout strong{font:600 17px 'IBM Plex Mono',monospace;color:#e7c3cf}.feature-copy{display:flex;flex-direction:column;justify-content:center}.feature-copy h3{font:500 33px/1.18 'Playfair Display',serif;margin:14px 0}.feature-copy p{color:var(--muted);font-size:14px}.chips{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0}.chip{border:1px solid #694656;padding:5px 9px;color:#d9b3c0;font:10px 'IBM Plex Mono',monospace}.control-row{margin-top:18px;border-top:1px solid var(--line);padding-top:20px}.control-row label{display:flex;justify-content:space-between;font:11px 'IBM Plex Mono',monospace;color:#c7bcc4}.control-row input{width:100%;margin-top:14px;accent-color:#ad5574}.disclaimer{font-size:11px!important;color:#8e8993!important;margin-top:16px}.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}.project-card{padding:25px;border:1px solid var(--line);background:#17181e}.project-card .index{color:var(--light);font:12px 'IBM Plex Mono',monospace}.project-card h3{font:500 23px 'Playfair Display',serif;margin-top:18px}.project-card p{font-size:13px;color:var(--muted)}.experience{background:var(--paper);color:#241b20}.experience .eyebrow{color:#8d3553}.experience .section-head p{color:#73696e}.exp-grid{display:grid;grid-template-columns:.65fr 1.35fr;gap:60px}.exp-aside h3{font:500 34px 'Playfair Display',serif}.exp-aside p{font-size:14px;color:#746a70}.exp-aside .mono{color:#8d3553}.exp-items{display:grid;grid-template-columns:1fr 1fr;gap:24px}.exp-item{border-top:1px solid #cfc1c4;padding-top:15px}.exp-item b{font:500 22px 'Playfair Display',serif;color:#8d3553}.exp-item h3{font-size:16px;margin:10px 0}.exp-item p{font-size:13px;color:#6d6268;margin:0}.impact{margin-top:25px;padding:19px 23px;border-left:3px solid #8d3553;background:#e8dcdf;font-size:14px}.impact strong{color:#8d3553;font-size:21px}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}.timeline{border-top:1px solid var(--line);margin-top:25px}.timeline article{padding:19px 0;border-bottom:1px solid var(--line)}.timeline span{color:var(--light);font:11px 'IBM Plex Mono',monospace}.timeline h3{font-size:16px;margin:8px 0}.timeline p{font-size:13px;color:var(--muted);margin:0}.skills{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:28px}.skill{border-top:1px solid var(--line);padding-top:15px}.skill h3{font-size:15px;color:#e5b5c5}.skill p{font-size:13px;color:var(--muted)}.contact{background:#261b23;border-top:1px solid #6a4052}.contact .wrap{display:flex;align-items:center;justify-content:space-between;gap:30px}.contact h2{max-width:650px}.contact p{color:#c2b0ba;font-size:14px}.footer{display:flex;justify-content:space-between;gap:20px;padding:28px 0;color:#938c95;font:11px 'IBM Plex Mono',monospace}.footer a{color:#d6a7b7}@media(max-width:850px){.hero{gap:25px}.project-feature{grid-template-columns:1fr}.project-grid{grid-template-columns:1fr 1fr}.exp-grid{gap:30px}.about-grid{gap:32px}}@media(max-width:620px){.wrap{padding:0 20px}nav{height:66px}.navlinks{display:none}.hero{grid-template-columns:1fr;padding:60px 0}.hero h1{font-size:54px}.portrait{max-width:290px;justify-self:center;margin-top:20px}.metrics{grid-template-columns:1fr 1fr}.section-head{display:block}.section-head p{margin-top:22px}section{padding:65px 0}.project-feature{padding:12px}.project-grid,.exp-grid,.exp-items,.about-grid,.skills{grid-template-columns:1fr}.contact .wrap{display:block}.contact .btn{margin-top:22px}.footer{flex-direction:column}.schematic svg text{font-size:11px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
-</style></head><body>
-<header><nav class="wrap"><a href="#top" class="brand" aria-label="Nataliia Evseeva home">n<b>e.</b></a><div class="navlinks"><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#about">Background</a><a href="#contact">Contact</a></div><a class="navcta" href="assets/Nataliia_Evseeva_CV.pdf" target="_blank" rel="noopener">VIEW RESUME ↗</a></nav></header>
-<main id="top"><div class="wrap"><div class="hero"><div><div class="eyebrow">ENGINEERING PORTFOLIO / MAGDEBURG, GERMANY</div><h1>From concept<br>to <em>validated</em><br>hardware.</h1><p class="lede">I'm Nataliia Evseeva — a Computer Science student with experience in mechanical design, automotive product development, hardware prototyping and engineering program coordination. I connect analytical thinking with hands-on execution.</p><div class="hero-buttons"><a class="btn primary" href="#projects">EXPLORE PROJECTS ↓</a><a class="btn" href="assets/Nataliia_Evseeva_CV.pdf" target="_blank" rel="noopener">DOWNLOAD CV ↗</a></div></div><div class="portrait"><img src="/portrait.jpg" alt="Portrait of Nataliia Evseeva"><div class="portrait-note">MECHANICAL DESIGN × SOFTWARE × VALIDATION</div></div></div><div class="metrics"><div class="metric"><strong>Sensata Technologies</strong><span>AUTOMOTIVE EXPERIENCE</span></div><div class="metric"><strong>17% fewer errors</strong><span>DOCUMENTATION IMPROVEMENT</span></div><div class="metric"><strong>ESP32 + Python</strong><span>BATTERY MONITORING</span></div><div class="metric"><strong>OVGU Magdeburg</strong><span>B.SC. COMPUTER SCIENCE</span></div></div></div>
-<section id="projects"><div class="wrap"><div class="section-head"><div><div class="eyebrow">01 / SELECTED ENGINEERING WORK</div><h2>Hardware meets software.</h2></div><p>From sensor acquisition and mechanical packaging to validation criteria, data visualization and technical documentation.</p></div><div class="project-feature"><div class="schematic"><div class="eyebrow" style="margin-bottom:12px">SYSTEM ARCHITECTURE / INTERACTIVE SCHEMATIC</div><svg viewBox="0 0 700 390" role="img" aria-label="Conceptual system diagram: low-voltage battery test setup connects voltage, current and temperature sensing to ESP32, which transmits readings to a Python dashboard"><defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0 0L6 3L0 6" fill="none" stroke="#c8879e" stroke-width="1.5"/></marker></defs><path class="wire" d="M157 160H225M157 265H190V208H225M157 350H190V240H225M385 208H452" marker-end="url(#arrow)"/><rect class="node" x="14" y="107" width="143" height="93" rx="5"/><text x="28" y="134">BATTERY</text><text class="sub" x="28" y="153">LOW-VOLTAGE TEST</text><text class="tiny" x="28" y="177">VOLTAGE + CURRENT</text><rect class="node" x="14" y="227" width="143" height="74" rx="5"/><text x="28" y="253">TEMP SENSOR</text><text class="sub" x="28" y="275">THERMAL MONITOR</text><rect class="node" x="14" y="318" width="143" height="58" rx="5"/><text x="28" y="340">TEST SETUP</text><text class="sub" x="28" y="359">CURRENT-LIMITED</text><rect class="node active" x="225" y="135" width="160" height="144" rx="6"/><text x="245" y="169">ESP32</text><text class="sub" x="245" y="190">SENSOR ACQUISITION</text><path d="M245 211h120M245 224h90M245 237h110" stroke="#a87085" stroke-width="2" stroke-linecap="round"/><text class="tiny" x="245" y="260">DATA TRANSMISSION</text><rect class="node" x="452" y="98" width="231" height="224" rx="6"/><text x="471" y="127">PYTHON DASHBOARD</text><path d="M472 146h188v111H472z" fill="#151720" stroke="#514453"/><path id="signalPath" d="M478 210L498 202L518 212L538 190L558 198L578 182L598 192L618 175L652 188" stroke="#edb5c8" stroke-width="2.5" fill="none"/><path d="M478 231h176" stroke="#5c4b5b" stroke-dasharray="3 5"/><text class="tiny" x="473" y="280">LIVE MEASUREMENTS</text><text class="sub" x="473" y="300">ANOMALY / TEST REPORTS</text><text class="wiretext" x="397" y="194">DATA</text><text class="sub" x="15" y="27">MONITORING & VALIDATION SYSTEM</text><text class="sub" x="15" y="43">FUNCTIONAL BLOCK DIAGRAM · NOT TO SCALE</text></svg><div class="readout"><div><span>VOLTAGE / DEMO</span><strong id="voltage">12.4 V</strong></div><div><span>CURRENT / DEMO</span><strong id="current">1.20 A</strong></div><div><span>TEMPERATURE / DEMO</span><strong id="temp">26.0 °C</strong></div></div><div class="schematic-caption"><span>Illustrative UI readings, not live hardware telemetry</span><span>ESP32 → PYTHON</span></div></div><div class="feature-copy"><div class="eyebrow">INDEPENDENT ENGINEERING PROJECT</div><h3>Smart Battery Monitoring & Validation System</h3><p>Designed and developed a low-voltage monitoring prototype using ESP32 sensor acquisition, Python-based visualization and SolidWorks mechanical enclosure design.</p><p>Defined test procedures and validation criteria, tracked requirements, documented design changes and iterated on hardware and software using experimental measurements.</p><div class="chips"><span class="chip">ESP32</span><span class="chip">PYTHON</span><span class="chip">SOLIDWORKS</span><span class="chip">VALIDATION</span><span class="chip">BOM</span></div><div class="control-row"><label for="load"><span>INTERACTIVE DEMO / SIMULATED LOAD</span><output id="loadValue">50%</output></label><input id="load" type="range" min="0" max="100" value="50" aria-label="Simulated load percentage"></div><p class="disclaimer">Architecture is a schematic illustration of the project. The slider demonstrates example readings; it is not connected to physical hardware.</p></div></div><div class="project-grid"><article class="project-card"><span class="index">02 / COMPUTATIONAL MODELING</span><h3>Potential Flow Around a Cylinder</h3><p>Implemented a mathematical potential-flow model in Python and visualized flow behavior around a cylinder.</p><div class="chips"><span class="chip">PYTHON</span><span class="chip">MATHEMATICAL MODELING</span></div></article><article class="project-card"><span class="index">03 / AI & KNOWLEDGE SYSTEMS</span><h3>Source-Grounded LLM System</h3><p>Built a document-grounded question-answering prototype using over 100 source documents; evaluated more than 50 model responses.</p><div class="chips"><span class="chip">RAG</span><span class="chip">LLM APIs</span><span class="chip">PYTHON</span></div></article><article class="project-card"><span class="index">04 / ALGORITHMS</span><h3>Data Structures in C++</h3><p>Implemented seven data structures and sorting algorithms, comparing execution behavior and handling edge cases.</p><div class="chips"><span class="chip">C++</span><span class="chip">ALGORITHMS</span><span class="chip">OOP</span></div></article></div></div></section>
-<section class="experience" id="experience"><div class="wrap"><div class="section-head"><div><div class="eyebrow">02 / INDUSTRY EXPERIENCE</div><h2>Engineering in practice.</h2></div><p>Mechanical design, technical verification and cross-functional collaboration in an automotive engineering environment.</p></div><div class="exp-grid"><div class="exp-aside"><div class="mono">JAN 2025 — JUN 2025 · SOFIA</div><h3>Sensata<br>Technologies</h3><div style="color:#8d3553;font-weight:600">Mechanical Design & Product Development Intern</div><p>Worked across mechanical design, testing, production coordination and engineering documentation.</p></div><div><div class="exp-items"><div class="exp-item"><b>01</b><h3>CAD & Mechanical Design</h3><p>SolidWorks assemblies, component interfaces, tolerances, drawings, BOMs and machine element sizing.</p></div><div class="exp-item"><b>02</b><h3>FEA & Design Validation</h3><p>Structural analysis, prototype testing, measurements, root cause analysis and iterative improvements.</p></div><div class="exp-item"><b>03</b><h3>PLM & Change Management</h3><p>Enovia, Polarion, MES and WARP; requirements tracking, engineering changes and technical data records.</p></div><div class="exp-item"><b>04</b><h3>Program Coordination</h3><p>Milestone tracking, testing schedules, supply chain coordination, stakeholder reporting and status dashboards.</p></div></div><div class="impact"><strong>17%</strong> reduction in documentation errors through BOM verification and PLM engineering change records.</div></div></div></div></section>
-<section id="about"><div class="wrap"><div class="section-head"><div><div class="eyebrow">03 / BACKGROUND & CAPABILITIES</div><h2>Built across disciplines.</h2></div><p>A foundation in computer science and mathematics combined with practical mechanical engineering experience.</p></div><div class="about-grid"><div><div class="eyebrow">EDUCATION & LEADERSHIP</div><div class="timeline"><article><span>2026 — PRESENT</span><h3>Otto von Guericke University Magdeburg</h3><p>B.Sc. Bilingual Computer Science · GPA 2.3 (German scale). Relevant studies: Computer Engineering, algorithms, databases, automata theory, linear algebra.</p></article><article><span>2024 — 2026</span><h3>American University in Bulgaria</h3><p>Studies in Computer Science and Mathematics before transferring to OVGU.</p></article><article><span>SEP 2025 — JAN 2026</span><h3>Teaching Assistant · Automata Theory</h3><p>Developed three Python tools for a course with over 40 students; delivered weekly office hours.</p></article><article><span>AUG 2024 — PRESENT</span><h3>Mathematics & English Tutor</h3><p>Managed individualized instruction, scheduling and progress tracking for 50 students.</p></article><article><span>AWARDS</span><h3>Programming Olympiads</h3><p>First place with maximum score in a national-level programming olympiad; winner of a regional team programming olympiad in Russia.</p></article></div></div><div><div class="eyebrow">TECHNICAL TOOLKIT</div><div class="skills"><div class="skill"><h3>Mechanical</h3><p>SolidWorks, CAD, FEM/FEA, technical drawings, tolerancing, material selection, prototyping.</p></div><div class="skill"><h3>Hardware</h3><p>ESP32, voltage/current sensing, temperature monitoring, data acquisition, functional testing.</p></div><div class="skill"><h3>PLM & Manufacturing</h3><p>Enovia, Polarion, MES, WARP, BOM management, requirements traceability.</p></div><div class="skill"><h3>Program Coordination</h3><p>Milestones, design changes, cross-functional communication, Asana, Trello, dashboards.</p></div><div class="skill"><h3>Programming</h3><p>Python, C++, C#, Java, SQL, VBA, Power Automate, Git.</p></div><div class="skill"><h3>Languages</h3><p>English C1 · German B2 (progressing toward C1) · Bulgarian B2 · Russian native.</p></div></div><a class="btn" style="margin-top:25px" href="https://github.com/natusikse" target="_blank" rel="noopener">GITHUB PROFILE ↗</a></div></div></div></section>
-<section class="contact" id="contact"><div class="wrap"><div><div class="eyebrow">04 / LET'S BUILD SOMETHING MEANINGFUL</div><h2>Engineering starts<br>with a conversation.</h2><p>Interested in battery technology, product development and technical program management.</p><p><a href="mailto:nevseevadm@gmail.com">nevseevadm@gmail.com</a> · Magdeburg, Germany</p></div><a class="btn primary" href="mailto:nevseevadm@gmail.com?subject=Engineering%20opportunity">GET IN TOUCH ↗</a></div></section></main><footer class="wrap footer"><span>© 2026 Nataliia Evseeva · Independent engineering portfolio</span><span><a href="assets/Nataliia_Evseeva_CV.pdf" target="_blank" rel="noopener">RESUME ↗</a> &nbsp; <a href="https://github.com/natusikse" target="_blank" rel="noopener">GITHUB ↗</a></span></footer>
-<script>const slider=document.getElementById('load');function update(){const v=Number(slider.value);document.getElementById('loadValue').value=v+'%';document.getElementById('voltage').textContent=(12.7-v*.006).toFixed(2)+' V';document.getElementById('current').textContent=(.2+v*.02).toFixed(2)+' A';document.getElementById('temp').textContent=(23+v*.075).toFixed(1)+' °C';const path=document.getElementById('signalPath');const ys=[210,202,212,190,198,182,192,175,188].map((y,i)=>y+(50-v)*(.05+(i%3)*.04));path.setAttribute('d',ys.map((y,i)=>(i?'L':'M')+(478+i*21.75)+' '+y).join(''));}slider.addEventListener('input',update);update();</script></body></html>
+:root {
+  --bg: #101116;
+  --panel: #1a1b22;
+  --panel2: #22232c;
+  --line: #34323a;
+  --text: #f5f0ec;
+  --muted: #a9a5ac;
+  --wine: #a34765;
+  --light: #e9b0c1;
+  --paper: #f2ece8;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', Arial, sans-serif;
+  line-height: 1.6;
+}
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; }
+button:focus-visible, a:focus-visible, input:focus-visible {
+  outline: 2px solid var(--light);
+  outline-offset: 4px;
+}
+.wrap { max-width: 1220px; margin: auto; padding: 0 38px; }
+.mono, .eyebrow {
+  font: 500 11px/1.5 'IBM Plex Mono', monospace;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+.eyebrow { color: var(--light); }
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: #101116e9;
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid #ffffff13;
+}
+nav {
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.brand { font: 600 25px 'Playfair Display', Georgia, serif; }
+.brand b { color: var(--light); }
+.navlinks { display: flex; gap: 28px; font-size: 13px; color: #d0cbd0; }
+.navlinks a:hover, .link:hover { color: var(--light); }
+.navcta {
+  padding: 10px 16px;
+  border: 1px solid #8c5368;
+  color: var(--light);
+  font-size: 12px;
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1.25fr .75fr;
+  gap: 55px;
+  align-items: center;
+  padding-top: 92px;
+  padding-bottom: 92px;
+}
+.hero h1 {
+  font: 500 clamp(51px,6.1vw,90px)/1.05 'Playfair Display', Georgia, serif;
+  letter-spacing: -.045em;
+  margin: 20px 0 25px;
+}
+.hero h1 em { font-style: normal; color: var(--light); }
+.lede { max-width: 630px; color: #bfb9c1; font-size: 17px; }
+.hero-buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 20px;
+  border: 1px solid #8c5368;
+  color: #f7e9ed;
+  font-size: 13px;
+  gap: 14px;
+  transition: transform .2s, background .2s;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn.primary { background: var(--wine); border-color: var(--wine); color: white; }
+
+.portrait { position: relative; max-width: 380px; justify-self: end; width: 100%; }
+.portrait:before {
+  content: '';
+  position: absolute;
+  inset: 24px -16px -16px 24px;
+  border: 1px solid #8c5368;
+}
+.portrait img {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  object-position: center 22%;
+  filter: saturate(.8);
+}
+.portrait-note {
+  position: absolute;
+  bottom: -18px;
+  left: -20px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 12px 18px;
+  color: #e6dce0;
+  font-size: 12px;
+}
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 22px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 26px 0;
+}
+.metric strong { display: block; font-size: 18px; font-weight: 600; }
+.metric span { font: 11px 'IBM Plex Mono', monospace; color: var(--muted); }
+
+section { padding: 100px 0; }
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 36px;
+  margin-bottom: 42px;
+}
+.section-head p { max-width: 400px; color: var(--muted); font-size: 14px; margin: 0; }
+h2 {
+  font: 500 clamp(37px,4.4vw,58px)/1.1 'Playfair Display', Georgia, serif;
+  letter-spacing: -.03em;
+  margin: 10px 0 0;
+}
+h3 { font-size: 20px; line-height: 1.3; margin: 0 0 12px; }
+
+.project-feature {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 26px;
+  display: grid;
+  grid-template-columns: 1.25fr .75fr;
+  gap: 36px;
+}
+.schematic { background: #111319; border: 1px solid #42404b; padding: 16px; position: relative; }
+.schematic svg { width: 100%; height: auto; display: block; }
+.schematic-caption {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: #aaa4b0;
+  font: 10px 'IBM Plex Mono', monospace;
+  margin-top: 9px;
+}
+.schematic svg .wire {
+  stroke: #a65c76;
+  stroke-width: 2.2;
+  fill: none;
+  stroke-dasharray: 6 6;
+  animation: dash 16s linear infinite;
+}
+.schematic svg .node { fill: #24232e; stroke: #8f6174; stroke-width: 1.4; }
+.schematic svg .node.active { stroke: #f2b7cb; filter: drop-shadow(0 0 5px #b85b8055); }
+.schematic svg text { font: 12px 'IBM Plex Mono', monospace; fill: #e9dce3; }
+.schematic svg .sub { font-size: 9px; fill: #b9acb7; }
+.schematic svg .tiny { font-size: 8px; fill: #e9bac8; }
+.schematic svg .wiretext { font-size: 9px; fill: #cf8ba3; }
+@keyframes dash { to { stroke-dashoffset: -180; } }
+
+.readout { display: grid; grid-template-columns: repeat(3,1fr); gap: 9px; margin-top: 14px; }
+.readout div { padding: 10px; background: #20212b; border: 1px solid #373441; }
+.readout span { display: block; font: 9px 'IBM Plex Mono', monospace; color: #bcb1bd; }
+.readout strong { font: 600 17px 'IBM Plex Mono', monospace; color: #e7c3cf; }
+
+.feature-copy { display: flex; flex-direction: column; justify-content: center; }
+.feature-copy h3 { font: 500 33px/1.18 'Playfair Display', serif; margin: 14px 0; }
+.feature-copy p { color: var(--muted); font-size: 14px; }
+.chips { display: flex; gap: 8px; flex-wrap: wrap; margin: 15px 0; }
+.chip { border: 1px solid #694656; padding: 5px 9px; color: #d9b3c0; font: 10px 'IBM Plex Mono', monospace; }
+.control-row { margin-top: 18px; border-top: 1px solid var(--line); padding-top: 20px; }
+.control-row label {
+  display: flex;
+  justify-content: space-between;
+  font: 11px 'IBM Plex Mono', monospace;
+  color: #c7bcc4;
+}
+.control-row input { width: 100%; margin-top: 14px; accent-color: #ad5574; }
+.disclaimer { font-size: 11px!important; color: #8e8993!important; margin-top: 16px; }
+
+.project-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 18px; }
+.project-card { padding: 25px; border: 1px solid var(--line); background: #17181e; }
+.project-card .index { color: var(--light); font: 12px 'IBM Plex Mono', monospace; }
+.project-card h3 { font: 500 23px 'Playfair Display', serif; margin-top: 18px; }
+.project-card p { font-size: 13px; color: var(--muted); }
+
+.experience { background: var(--paper); color: #241b20; }
+.experience .eyebrow { color: #8d3553; }
+.experience .section-head p { color: #73696e; }
+.exp-grid { display: grid; grid-template-columns: .65fr 1.35fr; gap: 60px; }
+.exp-aside h3 { font: 500 34px 'Playfair Display', serif; }
+.exp-aside p { font-size: 14px; color: #746a70; }
+.exp-aside .mono { color: #8d3553; }
+.exp-items { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.exp-item { border-top: 1px solid #cfc1c4; padding-top: 15px; }
+.exp-item b { font: 500 22px 'Playfair Display', serif; color: #8d3553; }
+.exp-item h3 { font-size: 16px; margin: 10px 0; }
+.exp-item p { font-size: 13px; color: #6d6268; margin: 0; }
+.impact {
+  margin-top: 25px;
+  padding: 19px 23px;
+  border-left: 3px solid #8d3553;
+  background: #e8dcdf;
+  font-size: 14px;
+}
+.impact strong { color: #8d3553; font-size: 21px; }
+
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; }
+.timeline { border-top: 1px solid var(--line); margin-top: 25px; }
+.timeline article { padding: 19px 0; border-bottom: 1px solid var(--line); }
+.timeline span { color: var(--light); font: 11px 'IBM Plex Mono', monospace; }
+.timeline h3 { font-size: 16px; margin: 8px 0; }
+.timeline p { font-size: 13px; color: var(--muted); margin: 0; }
+.skills { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 28px; }
+.skill { border-top: 1px solid var(--line); padding-top: 15px; }
+.skill h3 { font-size: 15px; color: #e5b5c5; }
+.skill p { font-size: 13px; color: var(--muted); }
+
+.contact { background: #261b23; border-top: 1px solid #6a4052; }
+.contact .wrap { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+.contact h2 { max-width: 650px; }
+.contact p { color: #c2b0ba; font-size: 14px; }
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 28px 0;
+  color: #938c95;
+  font: 11px 'IBM Plex Mono', monospace;
+}
+.footer a { color: #d6a7b7; }
+
+@media(max-width:850px) {
+  .hero { gap: 25px; }
+  .project-feature { grid-template-columns: 1fr; }
+  .project-grid { grid-template-columns: 1fr 1fr; }
+  .exp-grid { gap: 30px; }
+  .about-grid { gap: 32px; }
+}
+@media(max-width:620px) {
+  .wrap { padding: 0 20px; }
+  nav { height: 66px; }
+  .navlinks { display: none; }
+  .hero { grid-template-columns: 1fr; padding: 60px 0; }
+  .hero h1 { font-size: 54px; }
+  .portrait { max-width: 290px; justify-self: center; margin-top: 20px; }
+  .metrics { grid-template-columns: 1fr 1fr; }
+  .section-head { display: block; }
+  .section-head p { margin-top: 22px; }
+  section { padding: 65px 0; }
+  .project-feature { padding: 12px; }
+  .project-grid, .exp-grid, .exp-items, .about-grid, .skills { grid-template-columns: 1fr; }
+  .contact .wrap { display: block; }
+  .contact .btn { margin-top: 22px; }
+  .footer { flex-direction: column; }
+  .schematic svg text { font-size: 11px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  html { scroll-behavior: auto; }
+  *, *:before, *:after { animation: none!important; transition: none!important; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav class="wrap">
+  <a href="#top" class="brand" aria-label="Nataliia Evseeva home">n<b>e.</b></a>
+  <div class="navlinks">
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#about">Background</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a class="navcta" href="./Nataliia_Evseeva_CV.pdf" target="_blank" rel="noopener noreferrer">VIEW RESUME ↗</a>
+</nav>
+</header>
+
+<main id="top">
+
+<div class="wrap">
+<div class="hero">
+  <div>
+    <div class="eyebrow">ENGINEERING PORTFOLIO / MAGDEBURG, GERMANY</div>
+    <h1>From concept<br>to <em>validated</em><br>hardware.</h1>
+    <p class="lede">
+      I'm Nataliia Evseeva — a Computer Science student with experience in
+      mechanical design, automotive product development, hardware prototyping
+      and engineering program coordination. I connect analytical thinking
+      with hands-on execution.
+    </p>
+    <div class="hero-buttons">
+      <a class="btn primary" href="#projects">EXPLORE PROJECTS ↓</a>
+      <a class="btn" href="./Nataliia_Evseeva_CV.pdf" target="_blank" rel="noopener noreferrer">DOWNLOAD CV ↗</a>
+    </div>
+  </div>
+
+  <div class="portrait">
+    <img src="./portrait.jpg" alt="Portrait of Nataliia Evseeva" loading="eager">
+    <div class="portrait-note">MECHANICAL DESIGN × SOFTWARE × VALIDATION</div>
+  </div>
+</div>
+
+<div class="metrics">
+  <div class="metric"><strong>Sensata Technologies</strong><span>AUTOMOTIVE EXPERIENCE</span></div>
+  <div class="metric"><strong>17% fewer errors</strong><span>DOCUMENTATION IMPROVEMENT</span></div>
+  <div class="metric"><strong>ESP32 + Python</strong><span>BATTERY MONITORING</span></div>
+  <div class="metric"><strong>OVGU Magdeburg</strong><span>B.SC. COMPUTER SCIENCE</span></div>
+</div>
+</div>
+
+<section id="projects">
+<div class="wrap">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">01 / SELECTED ENGINEERING WORK</div>
+      <h2>Hardware meets software.</h2>
+    </div>
+    <p>From sensor acquisition and mechanical packaging to validation criteria, data visualization and technical documentation.</p>
+  </div>
+
+  <div class="project-feature">
+    <div class="schematic">
+      <div class="eyebrow" style="margin-bottom:12px">SYSTEM ARCHITECTURE / INTERACTIVE SCHEMATIC</div>
+
+      <svg viewBox="0 0 700 390" role="img" aria-label="Battery monitoring system architecture with ESP32 and Python dashboard">
+        <defs>
+          <marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto">
+            <path d="M0 0L6 3L0 6" fill="none" stroke="#c8879e" stroke-width="1.5"/>
+          </marker>
+        </defs>
+
+        <path class="wire" d="M157 160H225M157 265H190V208H225M157 350H190V240H225M385 208H452" marker-end="url(#arrow)"/>
+
+        <rect class="node" x="14" y="107" width="143" height="93" rx="5"/>
+        <text x="28" y="134">BATTERY</text>
+        <text class="sub" x="28" y="153">LOW-VOLTAGE TEST</text>
+        <text class="tiny" x="28" y="177">VOLTAGE + CURRENT</text>
+
+        <rect class="node" x="14" y="227" width="143" height="74" rx="5"/>
+        <text x="28" y="253">TEMP SENSOR</text>
+        <text class="sub" x="28" y="275">THERMAL MONITOR</text>
+
+        <rect class="node" x="14" y="318" width="143" height="58" rx="5"/>
+        <text x="28" y="340">TEST SETUP</text>
+        <text class="sub" x="28" y="359">CURRENT-LIMITED</text>
+
+        <rect class="node active" x="225" y="135" width="160" height="144" rx="6"/>
+        <text x="245" y="169">ESP32</text>
+        <text class="sub" x="245" y="190">SENSOR ACQUISITION</text>
+        <path d="M245 211h120M245 224h90M245 237h110" stroke="#a87085" stroke-width="2" stroke-linecap="round"/>
+        <text class="tiny" x="245" y="260">DATA TRANSMISSION</text>
+
+        <rect class="node" x="452" y="98" width="231" height="224" rx="6"/>
+        <text x="471" y="127">PYTHON DASHBOARD</text>
+        <path d="M472 146h188v111H472z" fill="#151720" stroke="#514453"/>
+        <path id="signalPath" d="M478 210L498 202L518 212L538 190L558 198L578 182L598 192L618 175L652 188" stroke="#edb5c8" stroke-width="2.5" fill="none"/>
+        <path d="M478 231h176" stroke="#5c4b5b" stroke-dasharray="3 5"/>
+        <text class="tiny" x="473" y="280">LIVE MEASUREMENTS</text>
+        <text class="sub" x="473" y="300">ANOMALY / TEST REPORTS</text>
+
+        <text class="wiretext" x="397" y="194">DATA</text>
+        <text class="sub" x="15" y="27">MONITORING &amp; VALIDATION SYSTEM</text>
+        <text class="sub" x="15" y="43">FUNCTIONAL BLOCK DIAGRAM · NOT TO SCALE</text>
+      </svg>
+
+      <div class="readout">
+        <div><span>VOLTAGE / DEMO</span><strong id="voltage">12.4 V</strong></div>
+        <div><span>CURRENT / DEMO</span><strong id="current">1.20 A</strong></div>
+        <div><span>TEMPERATURE / DEMO</span><strong id="temp">26.0 °C</strong></div>
+      </div>
+      <div class="schematic-caption">
+        <span>Illustrative UI readings, not live hardware telemetry</span>
+        <span>ESP32 → PYTHON</span>
+      </div>
+    </div>
+
+    <div class="feature-copy">
+      <div class="eyebrow">INDEPENDENT ENGINEERING PROJECT</div>
+      <h3>Smart Battery Monitoring &amp; Validation System</h3>
+      <p>Designed and developed a low-voltage monitoring prototype using ESP32 sensor acquisition, Python-based visualization and SolidWorks mechanical enclosure design.</p>
+      <p>Defined test procedures and validation criteria, tracked requirements, documented design changes and iterated on hardware and software using experimental measurements.</p>
+      <div class="chips">
+        <span class="chip">ESP32</span>
+        <span class="chip">PYTHON</span>
+        <span class="chip">SOLIDWORKS</span>
+        <span class="chip">VALIDATION</span>
+        <span class="chip">BOM</span>
+      </div>
+      <div class="control-row">
+        <label for="load"><span>INTERACTIVE DEMO / SIMULATED LOAD</span><output id="loadValue">50%</output></label>
+        <input id="load" type="range" min="0" max="100" value="50" aria-label="Simulated load percentage">
+      </div>
+      <p class="disclaimer">Architecture is a schematic illustration of the project. The slider demonstrates example readings; it is not connected to physical hardware.</p>
+    </div>
+  </div>
+
+  <div class="project-grid">
+    <article class="project-card">
+      <span class="index">02 / COMPUTATIONAL MODELING</span>
+      <h3>Potential Flow Around a Cylinder</h3>
+      <p>Implemented a mathematical potential-flow model in Python and visualized flow behavior around a cylinder.</p>
+      <div class="chips"><span class="chip">PYTHON</span><span class="chip">MATHEMATICAL MODELING</span></div>
+    </article>
+    <article class="project-card">
+      <span class="index">03 / AI &amp; KNOWLEDGE SYSTEMS</span>
+      <h3>Source-Grounded LLM System</h3>
+      <p>Built a document-grounded question-answering prototype using over 100 source documents; evaluated more than 50 model responses.</p>
+      <div class="chips"><span class="chip">RAG</span><span class="chip">LLM APIs</span><span class="chip">PYTHON</span></div>
+    </article>
+    <article class="project-card">
+      <span class="index">04 / ALGORITHMS</span>
+      <h3>Data Structures in C++</h3>
+      <p>Implemented seven data structures and sorting algorithms, comparing execution behavior and handling edge cases.</p>
+      <div class="chips"><span class="chip">C++</span><span class="chip">ALGORITHMS</span><span class="chip">OOP</span></div>
+    </article>
+  </div>
+</div>
+</section>
+
+<section class="experience" id="experience">
+<div class="wrap">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">02 / INDUSTRY EXPERIENCE</div>
+      <h2>Engineering in practice.</h2>
+    </div>
+    <p>Mechanical design, technical verification and cross-functional collaboration in an automotive engineering environment.</p>
+  </div>
+  <div class="exp-grid">
+    <div class="exp-aside">
+      <div class="mono">JAN 2025 — JUN 2025 · SOFIA</div>
+      <h3>Sensata<br>Technologies</h3>
+      <div style="color:#8d3553;font-weight:600">Mechanical Design &amp; Product Development Intern</div>
+      <p>Worked across mechanical design, testing, production coordination and engineering documentation.</p>
+    </div>
+    <div>
+      <div class="exp-items">
+        <div class="exp-item"><b>01</b><h3>CAD &amp; Mechanical Design</h3><p>SolidWorks assemblies, component interfaces, tolerances, drawings, BOMs and machine element sizing.</p></div>
+        <div class="exp-item"><b>02</b><h3>FEA &amp; Design Validation</h3><p>Structural analysis, prototype testing, measurements, root cause analysis and iterative improvements.</p></div>
+        <div class="exp-item"><b>03</b><h3>PLM &amp; Change Management</h3><p>Enovia, Polarion, MES and WARP; requirements tracking, engineering changes and technical data records.</p></div>
+        <div class="exp-item"><b>04</b><h3>Program Coordination</h3><p>Milestone tracking, testing schedules, supply chain coordination, stakeholder reporting and status dashboards.</p></div>
+      </div>
+      <div class="impact"><strong>17%</strong> reduction in documentation errors through BOM verification and PLM engineering change records.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="about">
+<div class="wrap">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">03 / BACKGROUND &amp; CAPABILITIES</div>
+      <h2>Built across disciplines.</h2>
+    </div>
+    <p>A foundation in computer science and mathematics combined with practical mechanical engineering experience.</p>
+  </div>
+  <div class="about-grid">
+    <div>
+      <div class="eyebrow">EDUCATION &amp; LEADERSHIP</div>
+      <div class="timeline">
+        <article>
+          <span>2026 — PRESENT</span>
+          <h3>Otto von Guericke University Magdeburg</h3>
+          <p>B.Sc. Bilingual Computer Science · GPA 2.3 (German scale). Relevant studies: Computer Engineering, algorithms, databases, automata theory, linear algebra.</p>
+        </article>
+        <article>
+          <span>2024 — 2026</span>
+          <h3>American University in Bulgaria</h3>
+          <p>Studies in Computer Science and Mathematics before transferring to OVGU.</p>
+        </article>
+        <article>
+          <span>SEP 2025 — JAN 2026</span>
+          <h3>Teaching Assistant · Automata Theory</h3>
+          <p>Developed three Python tools for a course with over 40 students; delivered weekly office hours.</p>
+        </article>
+        <article>
+          <span>AUG 2024 — PRESENT</span>
+          <h3>Mathematics &amp; English Tutor</h3>
+          <p>Managed individualized instruction, scheduling and progress tracking for 50 students.</p>
+        </article>
+        <article>
+          <span>AWARDS</span>
+          <h3>Programming Olympiads</h3>
+          <p>First place with maximum score in a national-level programming olympiad; winner of a regional team programming olympiad in Russia.</p>
+        </article>
+      </div>
+    </div>
+
+    <div>
+      <div class="eyebrow">TECHNICAL TOOLKIT</div>
+      <div class="skills">
+        <div class="skill"><h3>Mechanical</h3><p>SolidWorks, CAD, FEM/FEA, technical drawings, tolerancing, material selection, prototyping.</p></div>
+        <div class="skill"><h3>Hardware</h3><p>ESP32, voltage/current sensing, temperature monitoring, data acquisition, functional testing.</p></div>
+        <div class="skill"><h3>PLM &amp; Manufacturing</h3><p>Enovia, Polarion, MES, WARP, BOM management, requirements traceability.</p></div>
+        <div class="skill"><h3>Program Coordination</h3><p>Milestones, design changes, cross-functional communication, Asana, Trello, dashboards.</p></div>
+        <div class="skill"><h3>Programming</h3><p>Python, C++, C#, Java, SQL, VBA, Power Automate, Git.</p></div>
+        <div class="skill"><h3>Languages</h3><p>English C1 · German B2 (progressing toward C1) · Bulgarian B2 · Russian native.</p></div>
+      </div>
+      <a class="btn" style="margin-top:25px" href="https://github.com/natusikse" target="_blank" rel="noopener noreferrer">GITHUB PROFILE ↗</a>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="wrap">
+  <div>
+    <div class="eyebrow">04 / LET'S BUILD SOMETHING MEANINGFUL</div>
+    <h2>Engineering starts<br>with a conversation.</h2>
+    <p>Interested in battery technology, product development and technical program management.</p>
+    <p><a href="mailto:nevseevadm@gmail.com">nevseevadm@gmail.com</a> · Magdeburg, Germany</p>
+  </div>
+  <a class="btn primary" href="mailto:nevseevadm@gmail.com?subject=Engineering%20opportunity">GET IN TOUCH ↗</a>
+</div>
+</section>
+
+</main>
+
+<footer class="wrap footer">
+  <span>© 2026 Nataliia Evseeva · Independent engineering portfolio</span>
+  <span>
+    <a href="./Nataliia_Evseeva_CV.pdf" target="_blank" rel="noopener noreferrer">RESUME ↗</a>
+    &nbsp;
+    <a href="https://github.com/natusikse" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
+  </span>
+</footer>
+
+<script>
+const slider = document.getElementById('load');
+
+function update() {
+  const v = Number(slider.value);
+
+  document.getElementById('loadValue').value = v + '%';
+  document.getElementById('voltage').textContent =
+    (12.7 - v * 0.006).toFixed(2) + ' V';
+  document.getElementById('current').textContent =
+    (0.2 + v * 0.02).toFixed(2) + ' A';
+  document.getElementById('temp').textContent =
+    (23 + v * 0.075).toFixed(1) + ' °C';
+
+  const path = document.getElementById('signalPath');
+  const ys = [210,202,212,190,198,182,192,175,188]
+    .map((y,i) => y + (50-v) * (0.05+(i%3)*0.04));
+
+  path.setAttribute('d',
+    ys.map((y,i) =>
+      (i ? 'L' : 'M') + (478+i*21.75) + ' ' + y
+    ).join('')
+  );
+}
+
+slider.addEventListener('input', update);
+update();
+</script>
+
+</body>
+</html>
